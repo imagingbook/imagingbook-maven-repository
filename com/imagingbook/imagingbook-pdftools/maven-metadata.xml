@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.imagingbook</groupId>
+  <artifactId>imagingbook-pdftools</artifactId>
+  <versioning>
+    <versions>
+      <version>1.5-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20170505080802</lastUpdated>
+  </versioning>
+</metadata>
