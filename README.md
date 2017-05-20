@@ -15,16 +15,14 @@ Add the following lines to your project's POM file (pom.xml):
   </repository>
 </repositories>
 
- <dependencies>
+<dependencies>
   <dependency>
     <groupId>com.imagingbook</groupId>
     <artifactId>imagingbook-common</artifactId>
     <version>1.5</version>
   </dependency>
-  
-  <!-- other dependencies -->
-  
- </dependencies>
+  <!-- other dependencies ... -->
+</dependencies>
 ````
 
 ## Hints for setting up a public Maven repository on GitHub
