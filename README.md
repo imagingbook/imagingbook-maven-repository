@@ -36,7 +36,7 @@ on GitHub offers a lean and efficient alternative. Of great help in this context
 The file and directory structure of a Maven repository are precisely defined and we must make sure 
 that our repository strictly complies with these rules.
 
-1. Create and intialize a **public** repository on GitHub - let's call it ``MAVEN-REPO``. Note that if the repository is private, then
+1. Create and intialize a **public** repository on GitHub - let's call it ``maven-repo``. Note that if the repository is private, then
 some resources (e.g., pom-xml files) are not publicly accessible!
 
 2. Clone your reopository to your local file system.
