@@ -92,10 +92,10 @@ for every new project release.
 7. Other project depending on your Maven artefacts need to include 
 the following in their ``pom.xml`` files:
 ````
-	<repositories>
-		<repository>
-			<id>my-maven-repo</id>
-            <url>https://raw.github.com/MyGithubId/maven-repo</url>
+<repositories>
+<repository>
+<id>my-maven-repo</id>
+<url>https://raw.github.com/MyGithubId/maven-repo</url>
 			<layout>default</layout>
 		</repository>
 	</repositories>
