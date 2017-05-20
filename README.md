@@ -33,8 +33,12 @@ adds another level of complexity, which some people (including myself) find too 
 to handle. For those who prefer to keep things simple, setting up a public Maven repository
 on GitHub offers a lean and efficient alternative. Of great help in this context is this
 [blog by Mike Mitterer](http://www.mikemitterer.at/infopoint/programmierung/maven-repository-github.html).
-The file and directory structure of a Maven repository areprecisely defined and we must make sure 
+The file and directory structure of a Maven repository are precisely defined and we must make sure 
 that our repository strictly complies with these rules.
 
+1. Create and intialize a **public** repository on GitHub. Note that if the repository is private, then
+some resources (e.g., pom-xml files) are not publicly accessible!
+
+2. DSD
 
 
