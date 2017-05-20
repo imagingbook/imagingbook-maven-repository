@@ -93,22 +93,22 @@ for every new project release.
 the following in their ``pom.xml`` files:
 ````
 <repositories>
-<repository>
-<id>my-maven-repo</id>
-<url>https://raw.github.com/MyGithubId/maven-repo</url>
-			<layout>default</layout>
-		</repository>
-	</repositories>
+	<repository>
+		<id>my-maven-repo</id>
+		<url>https://raw.github.com/MyGithubId/maven-repo</url>
+		<layout>default</layout>
+	</repository>
+</repositories>
 
-	<dependencies>
+<dependencies>
 
-		<dependency>
-			<groupId>MyGroupId</groupId>
-			<artifactId>MyArtefact</artifactId>
-			<version>1.0</version>
-		</dependency>
+	<dependency>
+		<groupId>MyGroupId</groupId>
+		<artifactId>MyArtefact</artifactId>
+		<version>1.0</version>
+	</dependency>
 
-	</dependencies>
+</dependencies>
 ````
 
 
