@@ -101,13 +101,11 @@ the following in their ``pom.xml`` files:
 </repositories>
 
 <dependencies>
-
 	<dependency>
 		<groupId>MyGroupId</groupId>
 		<artifactId>MyArtefact</artifactId>
 		<version>1.0</version>
 	</dependency>
-
 </dependencies>
 ````
 
