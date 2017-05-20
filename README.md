@@ -6,12 +6,12 @@ Public Maven repository for imagingbook.com artefacts
 Add the following lines to your project's POM file (pom.xml):
 
 ````
-<repositories>   
-  <repository>      
-    <id>imagingbook-maven-repository</id>
-    <url>https://raw.github.com/imagingbook/imagingbook-maven-repository/master</url>
-    <layout>default</layout>
-  </repository>
+<repositories>
+    <repository>
+	<id>imagingbook-maven-repository</id>
+    	<url>https://raw.github.com/imagingbook/imagingbook-maven-repository/master</url>
+    	<layout>default</layout>
+    </repository>
 </repositories>
 
 <dependencies>
