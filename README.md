@@ -38,7 +38,7 @@ that our repository strictly complies with these rules.
 
 1. Create and intialize a **public** repository on GitHub - let's call it ``maven-repo`` 
 (assuming your Github account is ``MyGithubId``). 
-Note that if the repository is private, then some resources (e.g., pom-xml files) are 
+Note that if the repository is *private*, then some resources (e.g., pom-xml files) are 
 not publicly accessible!
 
 2. Clone your repository to your local file system,
