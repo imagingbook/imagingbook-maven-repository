@@ -51,7 +51,7 @@ So assume have this directory structure:
 	maven-repo/
 ````
 
-3. Add the following to your projects POM file (``maven-project/pom.xml``):
+3. Add the following to your project's POM file (``maven-project/pom.xml``):
 ````
 <distributionManagement>
 	<repository>
