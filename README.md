@@ -75,8 +75,8 @@ So assume have this directory structure:
 # Denote all files that are truly binary and should not be modified.
 *.jar binary
 ````
-Note: This step is important because by default GIT treats ``.xml`` files as text and
-modifies the line endings, such that the checksum (hash) values do not match
+Note: This step is important because by default Git treats ``.xml`` files as text and
+modifies the line endings, such that the checksum (hash) values of the online files do not match
 any longer.
 
 
