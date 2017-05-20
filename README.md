@@ -39,7 +39,7 @@ that our repository strictly complies with these rules.
 1. Create and intialize a **public** repository on GitHub - let's call it ``maven-repo`` 
 (assuming your Github account is ``MyGithubId``). 
 Note that if the repository is *private*, then some resources (e.g., pom-xml files) are 
-not publicly accessible!
+not publicly accessible and Maven dependencies cannot be resolved!
 
 2. Clone your repository to your local file system,
 e.g., into a folder ``maven-repo`` next to your project folder ``maven-project``.
@@ -84,12 +84,12 @@ any longer.
 ````
 mvn deploy
 ````
-This should place your project's artefacts in ``maven-repo/``. This must be repeated
-for every new project release.
+This should place ("deploy") your project's artefacts in ``maven-repo/``. 
+This step must be repeated for every new release of your project.
 
 6. Commit and push ``maven-repo`` to GitHub.
 
-7. Other project depending on your Maven artefacts need to include 
+7. Other projects depending on your Maven artefacts need to include 
 the following in their ``pom.xml`` files:
 ````
 <repositories>
