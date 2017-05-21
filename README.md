@@ -36,8 +36,7 @@ The last step is to make your project artefacts available to other Maven users.
 Public Maven artefacts are typically hosted on Maven Central or another official repository but this
 adds another level of complexity, which some people (including myself) find too much
 to handle. For those who prefer to keep things simple, setting up a public Maven repository
-on GitHub offers a lean and efficient alternative. Of great help in this context is this
-[blog by Mike Mitterer](http://www.mikemitterer.at/infopoint/programmierung/maven-repository-github.html).
+on GitHub offers a lean and efficient alternative. 
 The file and directory structure of a Maven repository are precisely defined and we must make sure 
 that our repository strictly complies with these rules.
 
