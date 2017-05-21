@@ -9,7 +9,7 @@ Home site: [www.imagingbook.com](http://www.imagingbook.com)
 ## How to use
 
 The stand-alone ``imagingbook-common`` core library is available as a public Maven artefact. 
-To use it in yiur Maven project, insert the following lines to your project's POM file (pom.xml):
+To use it in your Maven project, insert the following lines to your project's POM file (pom.xml):
 
 ````
 <repositories>
@@ -29,6 +29,9 @@ To use it in yiur Maven project, insert the following lines to your project's PO
   <!-- other dependencies ... -->
 </dependencies>
 ````
+Check [this repository](https://github.com/imagingbook/imagingbook-maven-repository/tree/master/com/imagingbook/imagingbook-common) 
+for the most recent release version.
+
 
 ## Hints for setting up a public Maven repository on GitHub
 
