@@ -1,6 +1,8 @@
 # imagingbook-maven-repository
 Public Maven repository for imagingbook.com artefacts.
 
+Main GitHub repository: https://github.com/imagingbook/imagingbook-public
+
 Home site: [www.imagingbook.com](http://www.imagingbook.com)
 
 
