@@ -8,7 +8,8 @@ Home site: [www.imagingbook.com](http://www.imagingbook.com)
 
 ## How to use
 
-Add the following lines to your project's POM file (pom.xml):
+The stand-alone ``imagingbook-common`` core library is available as a public Maven artefact. 
+To use it in yiur Maven project, insert the following lines to your project's POM file (pom.xml):
 
 ````
 <repositories>
@@ -31,7 +32,7 @@ Add the following lines to your project's POM file (pom.xml):
 
 ## Hints for setting up a public Maven repository on GitHub
 
-For beginners, getting started with Maven can become a strange and long learning experience.
+For beginners, getting started with Maven can easily turn into a strange and long learning experience.
 The last step is to make your project artefacts available to other Maven users.
 Public Maven artefacts are typically hosted on Maven Central or another official repository but this
 adds another level of complexity, which some people (including myself) find too much
