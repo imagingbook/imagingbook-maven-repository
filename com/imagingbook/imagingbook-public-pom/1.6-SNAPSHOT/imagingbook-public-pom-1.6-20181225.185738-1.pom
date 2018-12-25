@@ -1,0 +1,217 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.imagingbook</groupId>
+	<artifactId>imagingbook-public-pom</artifactId>
+	<version>1.6-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>../imagingbook-common</module>
+		<module>../imagingbook-plugins-all</module>
+		<module>../imagingbook-plugins-de2</module>
+		<module>../imagingbook-plugins-de3</module>
+		<module>../imagingbook-plugins-en1</module>
+		<module>../imagingbook-plugins-en2</module>
+		<module>../imagingbook-plugins-en3</module>
+	</modules>
+
+	<name>ImagingBook Parent</name>
+	<description>Java code for image processing books by W. Burger and M.J. Burge</description>
+	<inceptionYear>2006</inceptionYear>
+	<url>http://www.imagingbook.com</url>
+	
+	<properties>
+		<imagingbook.version>${project.version}</imagingbook.version>
+		<imagingbook.rootdir>${project.basedir}</imagingbook.rootdir>
+		<imagingbook.webdir>${project.basedir}/docs</imagingbook.webdir>
+		
+		<java.version>1.8</java.version>
+		<imagej.version>1.52i</imagej.version>
+		<commons-math3.version>3.6.1</commons-math3.version>
+		<itext.version>5.5.8</itext.version>
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+	
+	<developers>
+		<developer>
+			<name>Wilhelm Burger</name>
+		</developer>
+		<developer>
+			<name>Mark J. Burge</name>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>BSD 2-Clause "Simplified" License</name>
+			<url>http://opensource.org/licenses/BSD-2-Clause</url>
+		</license>
+	</licenses>
+
+
+	<repositories>
+		<repository>
+			<id>imagingbook-maven-repository</id>
+			<name>imagingbook-maven-repository on GitHub</name>
+			<url>https://raw.github.com/imagingbook/imagingbook-maven-repository/master</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>imagingbook-maven-repository</id>     <!-- used by 'mvn deploy' -->
+			<name>Imagingbook Maven Repository</name>
+			<url>file:///${imagingbook.rootdir}/../../imagingbook-maven-repository</url>
+		</repository>
+	</distributionManagement>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>net.imagej</groupId>
+				<artifactId>ij</artifactId>
+				<version>${imagej.version}</version>
+				<!-- https://mvnrepository.com/artifact/net.imagej/ij -->
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-math3</artifactId>
+				<version>${commons-math3.version}</version>
+				<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+			</dependency>
+			
+			<dependency>
+				<groupId>com.imagingbook</groupId>
+				<artifactId>imagingbook-common</artifactId>
+				<!-- <version>1.6-SNAPSHOT</version> -->
+				<version>${imagingbook.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.3</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+
+			<!-- skip tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<goals>deploy</goals>
+					<autoversionsubmodules>true</autoversionsubmodules>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<!-- Javadoc generation -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.3</version>
+				<configuration>
+					<!-- Default configuration for all reports -->
+					<reportOutputDirectory>${imagingbook.webdir}</reportOutputDirectory>
+					<destDir>javadoc</destDir>
+					<doctitle>${javadoc-doctitle}</doctitle>
+					<packagesheader>${project.name}</packagesheader>
+					<!-- <header>The ImagingBook HEADER</header> -->
+					<!-- <footer>The ImagingBook FOOTER</footer> -->
+					<!-- <top>The ImagingBook TOP text</top> -->
+					<bottom>
+	        		<![CDATA[Copyright &#169; {inceptionYear}&#x2013;{currentYear}, 
+	        		<a href="http://www.imagingbook.com" target="new">
+	        		Wilhelm Burger, Mark J. Burge</a>
+	        		<a href="http://opensource.org/licenses/BSD-2-Clause" target="new">
+	        		(BSD 2-Clause Simplified License)</a>]]>
+					</bottom>
+					<show>protected</show>
+					<nohelp>true</nohelp>
+					<linksource>true</linksource>
+					<author>false</author>
+					<verbose>true</verbose>
+					<!-- <detectLinks>true</detectLinks> -->
+					<!-- <detectOfflineLinks>true</detectOfflineLinks> -->
+				</configuration>
+			</plugin>
+
+
+			<plugin>  <!-- add more properties to MANIFEST file -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+						<manifestEntries>
+							<Build-Date>${buildDate}</Build-Date>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>  <!-- generate a separate jar file with source code -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>  <!-- to stop Maven complaining about missing version number -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.8.1</version>
+				<reportSets>
+					<reportSet />
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+	
+</project>
