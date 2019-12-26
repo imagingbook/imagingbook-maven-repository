@@ -24,13 +24,13 @@ To use it in your Maven project, insert the following lines to your project's PO
   <dependency>
     <groupId>com.imagingbook</groupId>
     <artifactId>imagingbook-common</artifactId>
-    <version>1.5</version>
+    <version>1.6-SNAPSHOT</version>
   </dependency>
   <!-- other dependencies ... -->
 </dependencies>
 ````
 Check [this repository](https://github.com/imagingbook/imagingbook-maven-repository/tree/master/com/imagingbook/imagingbook-common) 
-for the most recent release version.
+for the most recent stable release version.
 
 
 ## Hints for setting up a public Maven repository on GitHub
