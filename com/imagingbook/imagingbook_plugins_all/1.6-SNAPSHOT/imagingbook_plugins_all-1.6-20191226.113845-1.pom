@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.imagingbook</groupId>
+		<artifactId>imagingbook-public-pom</artifactId>
+		<version>1.6-SNAPSHOT</version>
+		<relativePath>../_pom-public</relativePath>
+	</parent>
+	
+	<artifactId>imagingbook_plugins_all</artifactId>
+	<packaging>jar</packaging>
+
+	<properties>
+	</properties>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>com.imagingbook</groupId>
+			<artifactId>imagingbook-common</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.github.wendykierp/JTransforms -->
+		<!-- https://github.com/wendykierp/JTransforms -->
+		<dependency>
+		    <groupId>com.github.wendykierp</groupId>
+		    <artifactId>JTransforms</artifactId>
+		    <version>3.1</version>
+		    <classifier>with-dependencies</classifier>
+		</dependency>
+		
+	</dependencies>
+
+	<build>
+		<outputDirectory>${project.basedir}/ImageJ/plugins</outputDirectory>
+		<plugins>
+			<!-- we rename the target jar and place it in another subdir -->
+			<!-- http://stackoverflow.com/questions/6689511/maven-how-to-place-the-output-jar-into-another-folder -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<!-- <version>3.2.0</version> -->
+				<configuration>
+					<!-- <outputDirectory>${project.build.directory}/ImageJ/jars</outputDirectory> -->
+					<!-- <finalName>${project.name}_XXX_${project.version}</finalName> -->
+				</configuration>
+			</plugin>
+
+			<!-- Copy required jar files into IJ environment to be available at runtime. 
+				 See https://maven.apache.org/plugins/maven-dependency-plugin/examples/copying-artifacts.html -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<!-- <version>3.1.1</version> -->
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+
+								<!-- copy ij.jar into ImageJ/ -->
+								<artifactItem>
+									<groupId>net.imagej</groupId>
+									<artifactId>ij</artifactId>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/ImageJ</outputDirectory>
+									<destFileName>ij.jar</destFileName>
+								</artifactItem>
+
+								<!-- copy the imagingbook-common.jar into ImageJ/jars/ -->
+								<artifactItem>
+									<groupId>com.imagingbook</groupId>
+									<artifactId>imagingbook-common</artifactId>
+									<!-- <classifier>with-dependencies</classifier> -->
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.basedir}/ImageJ/jars</outputDirectory>
+									<destFileName>imagingbook-common.jar</destFileName>
+								</artifactItem>
+
+								<!-- copy apache-commons-math.jar into ImageJ/jars -->
+								<artifactItem>
+									<groupId>org.apache.commons</groupId>
+									<artifactId>commons-math3</artifactId>
+									<overWrite>false</overWrite>
+									<outputDirectory>${project.basedir}/ImageJ/jars</outputDirectory>
+									<destFileName>commons-math3.jar</destFileName>
+								</artifactItem>
+								
+								<!-- copy JTransforms.jar into ImageJ/jars -->
+								<artifactItem>
+									<groupId>com.github.wendykierp</groupId>
+		    						<artifactId>JTransforms</artifactId>
+		    						<classifier>with-dependencies</classifier>
+									<overWrite>false</overWrite>
+									<outputDirectory>${project.basedir}/ImageJ/jars</outputDirectory>
+									<destFileName>JTransforms.jar</destFileName>
+								</artifactItem>
+								
+							</artifactItems>
+
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- end of copy -->
+		</plugins>
+	</build>
+</project>
