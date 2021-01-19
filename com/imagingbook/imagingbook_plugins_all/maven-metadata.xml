@@ -5,7 +5,6 @@
   <versioning>
     <release>1.9</release>
     <versions>
-      <version>1.6-SNAPSHOT</version>
       <version>1.6</version>
       <version>1.7</version>
       <version>1.8</version>
