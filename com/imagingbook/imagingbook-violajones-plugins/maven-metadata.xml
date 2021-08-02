@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>com.imagingbook</groupId>
-  <artifactId>imagingbook-violajones</artifactId>
+  <artifactId>imagingbook-violajones-plugins</artifactId>
   <versioning>
     <versions>
       <version>2.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20210802085751</lastUpdated>
+    <lastUpdated>20210802085753</lastUpdated>
   </versioning>
 </metadata>
