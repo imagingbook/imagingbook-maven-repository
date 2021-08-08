@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
   <groupId>com.imagingbook</groupId>
-  <artifactId>imagingbook-calibrate-plugins</artifactId>
+  <artifactId>imagingbook-calibrate_plugins</artifactId>
   <version>2.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20210805.122805</timestamp>
+      <timestamp>20210808.092240</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20210805122805</lastUpdated>
+    <lastUpdated>20210808092240</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>2.0-20210805.122805-1</value>
-        <updated>20210805122805</updated>
+        <value>2.0-20210808.092240-1</value>
+        <updated>20210808092240</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>2.0-20210805.122805-1</value>
-        <updated>20210805122805</updated>
+        <value>2.0-20210808.092240-1</value>
+        <updated>20210808092240</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>2.0-20210805.122805-1</value>
-        <updated>20210805122805</updated>
+        <value>2.0-20210808.092240-1</value>
+        <updated>20210808092240</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

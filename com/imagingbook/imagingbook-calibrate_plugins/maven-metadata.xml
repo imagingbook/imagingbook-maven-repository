@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>com.imagingbook</groupId>
-  <artifactId>imagingbook-calibrate-plugins</artifactId>
+  <artifactId>imagingbook-calibrate_plugins</artifactId>
   <versioning>
     <versions>
       <version>2.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20210805122805</lastUpdated>
+    <lastUpdated>20210808092240</lastUpdated>
   </versioning>
 </metadata>
