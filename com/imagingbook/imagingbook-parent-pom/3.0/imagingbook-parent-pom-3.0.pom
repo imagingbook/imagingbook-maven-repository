@@ -296,6 +296,7 @@
 						<configuration>
 							<target>
 								<echo level="info">**** imagingbook.rootdir = ${imagingbook.rootdir}</echo>
+								<echo level="info">**** outputDirectory = ${outputDirectory}</echo>
 								<echo level="info">**** imagingbook.ijplugins = ${imagingbook.ijplugins}</echo>
 								<echo level="info">**** imagingbook.skipdeploy = ${imagingbook.skipdeploy}</echo>
 								<echo level="info">**** maven.javadoc.skip = ${maven.javadoc.skip}</echo>
@@ -412,12 +413,12 @@
 
 			<properties>
 				<imagingbook.ijplugins>true</imagingbook.ijplugins>
-				<outputDirectory>${project.basedir}${file.separator}ImageJ${file.separator}plugins</outputDirectory>
+				<outputDirectory>${project.basedir}/ImageJ/plugins</outputDirectory>
 			</properties>
 
 			<build>
 				<plugins>
-					<!-- empty the ImageJ/jars/ directory at clean -->
+					<!-- empty the ImageJ/plugins and ImageJ/jars directories at clean -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-clean-plugin</artifactId>
@@ -428,7 +429,12 @@
 									<includes>
 										<include>**/*</include>
 									</includes>
-									<followSymlinks>false</followSymlinks>
+								</fileset>
+								<fileset>
+									<directory>${outputDirectory}</directory>
+									<includes>
+										<include>**/*</include>
+									</includes>
 								</fileset>
 							</filesets>
 						</configuration>
