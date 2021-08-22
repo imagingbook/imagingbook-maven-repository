@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- Note: The artifact ID has the last hyphen replaced by an underscore 
+	to be compatible with the standard naming scheme for ImageJ plugins 
+	(see https://imagej.nih.gov/ij/plugins/jar-demo.html). -->
+	
+	<artifactId>imagingbook-calibrate_plugins</artifactId>
+	<packaging>jar</packaging>
+	
+	<parent>
+		<groupId>com.imagingbook</groupId>
+		<artifactId>imagingbook-calibrate</artifactId>
+		<version>3.1-SNAPSHOT</version>
+	</parent>
+	
+	<properties>
+		<imagingbook.rootdir>${directory-up-2}</imagingbook.rootdir>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.imagingbook</groupId>
+			<artifactId>imagingbook-calibrate-lib</artifactId>
+			<version>3.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.imagingbook</groupId>
+			<artifactId>imagingbook-calibrate-data</artifactId>
+			<version>3.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+   		<!-- needed for updating Eclipse settings (see also ij-plugins-build profile) -->
+    	<outputDirectory>ImageJ/plugins</outputDirectory>
+	</build>
+
+</project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.imagingbook</groupId>
+  <artifactId>imagingbook-calibrate</artifactId>
+  <version>3.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20210822.092228</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20210822092228</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>3.1-20210822.092228-1</value>
+        <updated>20210822092228</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
