@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>net.imagej</groupId>
+  <artifactId>ij</artifactId>
+  <versioning>
+    <release>1.53p</release>
+    <versions>
+      <version>1.53j</version>
+      <version>1.53o</version>
+      <version>1.53p</version>
+    </versions>
+    <lastUpdated>20220321173213</lastUpdated>
+  </versioning>
+</metadata>
