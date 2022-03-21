@@ -24,7 +24,7 @@ To use it in your Maven project, insert the following lines to your project's PO
   <dependency>
     <groupId>com.imagingbook</groupId>
     <artifactId>imagingbook-common</artifactId>
-    <version>1.6-SNAPSHOT</version>
+    <version>3.1</version>
   </dependency>
   <!-- other dependencies ... -->
 </dependencies>
