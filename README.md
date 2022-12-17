@@ -1,5 +1,5 @@
-# imagingbook-maven-repository
-Public Maven repository for imagingbook.com artefacts.
+# imagingbook-maven-repository - OBSOLETE!
+Maven artefacts for imagingbook.com are now available on Maven Central!
 
 Main GitHub repository: https://github.com/imagingbook/imagingbook-public
 
